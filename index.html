@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phrasebook NO → KO / JA</title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    select, input {
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    #list {
+      padding: 10px;
+    }
+
+    .card {
+      background: white;
+      margin-bottom: 10px;
+      padding: 18px ;
+      border-radius: 10px;
+      display: flex;
+    }
+
+    .no {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .pron{
+      margin-top: 5px;
+      font-size: 15px;
+    }
+
+    .foreign  {
+      color: #666;
+      font-size: 13px;
+    }
+
+    .langs { max-width: 70%;}
+
+    button {
+      max-width: 30%;
+      width: 20%;
+      padding: 8px;
+      height: 45px;
+      font-size: 20px; 
+      margin-left: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+      background: rgb(231, 166, 177);
+      border: 0 none; 
+      color: white;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <select id="lang">
+    <option value="ko">Korean</option>
+    <option value="ja">Japanese</option>
+  </select>
+
+  <input id="search" placeholder="Search..." />
+</header>
+
+<div id="list"></div>
+
+<script src="app.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "Norwegian Phrasebook",
+  "short_name": "Phrasebook",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": []
+}
